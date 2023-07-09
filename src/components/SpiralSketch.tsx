@@ -12,7 +12,7 @@ const SpiralSketch: Sketch = (p5) => {
   const gradientEndColor = [255, 165, 0]; // Orange
 
   p5.setup = () => {
-    p5.createCanvas(400, 400);
+    p5.createCanvas(500, 500);
     p5.noLoop();
   };
 
