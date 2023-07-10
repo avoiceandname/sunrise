@@ -1,19 +1,23 @@
 import React from "react";
 import { type Sketch } from "@p5-wrapper/react";
 import { NextReactP5Wrapper } from "@p5-wrapper/next";
+import { useWindowSize } from "usehooks-ts";
 
 const SpiralSketch: Sketch = (p5) => {
-  const numRings = 200;
+  const numRings = 300;
   const minRadius = 10;
-  const maxRadius = 400;
   const spiralSpacing = 1;
   const spiralAngle = 0.04;
   const gradientStartColor = [255, 255, 0]; // Yellow
   const gradientEndColor = [255, 165, 0]; // Orange
 
   p5.setup = () => {
-    p5.createCanvas(500, 500);
+    p5.createCanvas(p5.windowWidth, p5.windowHeight);
     p5.noLoop();
+  };
+
+  p5.windowResized = () => {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
   };
 
   p5.draw = () => {
