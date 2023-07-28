@@ -1,7 +1,6 @@
 import React from "react";
 import { type Sketch } from "@p5-wrapper/react";
 import { NextReactP5Wrapper } from "@p5-wrapper/next";
-import { useWindowSize } from "usehooks-ts";
 
 const SpiralSketch: Sketch = (p5) => {
   const numRings = 300;
